@@ -1,0 +1,22 @@
+@path = /user/login
+@contentType = application/json
+
+### Login
+# @prompt email
+# @prompt password
+POST {{$dotenv URL}}/{{$dotenv STAGE}}{{path}} HTTP/2
+Content-Type: {{contentType}}
+
+{
+    "email": "{{email}}",
+    "password": "{{password}}"
+}
+
+### Login mock
+POST {{$dotenv URL}}/{{$dotenv STAGE}}{{path}} HTTP/2
+Content-Type: {{contentType}}
+
+{
+    "email": "x@bruno.pro",
+    "password": "12345678"
+}

@@ -1,0 +1,12 @@
+@path = /user/event-trigger
+@contentType = application/json
+
+### Event Trigger
+POST {{$dotenv URL}}/{{$dotenv STAGE}}{{path}} HTTP/2
+Content-Type: {{contentType}}
+Authorization: Bearer {{$dotenv JWT}}
+
+{
+    "info": "some info",
+    "order": 1
+}

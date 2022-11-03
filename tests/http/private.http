@@ -1,0 +1,7 @@
+@path = /user/private
+@contentType = application/json
+
+### Private
+POST {{$dotenv URL}}/{{$dotenv STAGE}}{{path}} HTTP/2
+Content-Type: {{contentType}}
+Authorization: Bearer {{$dotenv JWT}}
